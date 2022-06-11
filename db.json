@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "wdqwdqd",
+      "email": "wdqwdq",
+      "mobile": 122327770,
+      "address": "sascasc",
+      "services": "qwerty"
+    },
+    {
+      "id": 2,
+      "name": "fbfbdb",
+      "email": "fdbdfb",
+      "mobile": 43545,
+      "address": "Rathna",
+      "services": "gfdgdfg"
+    },
+    {
+      "id": 5,
+      "name": "Thaza",
+      "email": "thaza@HWHDQ.QWDQW",
+      "mobile": 144256,
+      "address": "kayamkulam",
+      "services": "xyz"
+    }
+  ],
+  "signup": [
+    {
+      "name": "efwf",
+      "email": "wefefw",
+      "mobile": 12342342342,
+      "password": "wefwefw",
+      "id": 1
+    },
+    {
+      "name": "abhishek",
+      "email": "abhi@gmail.com",
+      "mobile": 1234,
+      "password": "abhi",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
