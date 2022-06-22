@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "name": "wdqwdqd",
+      "name": "fbfb2",
       "email": "wdqwdq",
       "mobile": 122327770,
       "address": "sascasc",
@@ -23,6 +23,14 @@
       "mobile": 144256,
       "address": "kayamkulam",
       "services": "xyz"
+    },
+    {
+      "id": 6,
+      "name": "Planet",
+      "email": "planet@gmail.com",
+      "mobile": 987678909,
+      "address": "Planet , NH66 , Highway",
+      "services": "Catering and multi cusine"
     }
   ],
   "signup": [

@@ -15,6 +15,9 @@ export class RestaurantDashComponent implements OnInit {
   allRestaurantData: any;
   enableUpdate=false;
   enableAdd=true;
+ term = '';
+ // searchTerm = '';
+  allResttData=[];
 
   constructor(private formBuilder: FormBuilder , private api :ApiService) {
 
@@ -30,7 +33,13 @@ export class RestaurantDashComponent implements OnInit {
       services: ['']
     });
     this.getRest();
+    
   }
+addResto(){
+  this.formValue.reset();
+  this.enableUpdate=false;
+  this.enableAdd=true;
+}
 
 addRest(){
   this.restaurantModelObj.name=this.formValue.value.name;
@@ -69,8 +78,6 @@ editRest(data:any){
   this.formValue.controls['address'].setValue(data.address);
   this.formValue.controls['mobile'].setValue(data.mobile);
   this.formValue.controls['services'].setValue(data.services);
-
-
 }
 
 updateRest(){
@@ -79,17 +86,16 @@ updateRest(){
   this.restaurantModelObj.address=this.formValue.value.address;
   this.restaurantModelObj.services=this.formValue.value.services;
   this.restaurantModelObj.mobile=this.formValue.value.mobile;
- 
   this.api.updateRestuarant(this.restaurantModelObj.id,this.restaurantModelObj).subscribe(res=>{
     console.log(res)
     alert("Restuarant Records updated")
     this.formValue.reset();
     this.getRest();
+   
   },
   err=>{
     alert("some error")
   })
-  
 }
 
 delRest(data:any){
@@ -98,7 +104,13 @@ delRest(data:any){
     alert("Record deleted");
     this.getRest();
   })
-
 }
 
+search(value: string): void {
+  this.allResttData = this.allRestaurantData.filter((val:any) =>
+    val.name.toLowerCase().includes(value)
+  );
+  console.log(this.allResttData);
+  
+}
 }

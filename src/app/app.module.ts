@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -8,19 +8,24 @@ import { AppComponent } from './app.component';
 import { RestaurantDashComponent } from './restuarant-dash/restuarant-dash.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantDashComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
